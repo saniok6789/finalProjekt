@@ -67,6 +67,11 @@
             var params = new URLSearchParams(window.location.search);
             var name = params.get('name');
             document.getElementById('greeting').innerHTML = 'Добрый день, ' + name + '!';
+
+            // Переход на основную страницу через 5 секунд
+            setTimeout(function () {
+                window.location.href = "https://saniok6789.github.io/finalProjekt/index.html";
+            }, 5000);
         }
     </script>
 </head>
@@ -79,21 +84,4 @@
     </header>
     <section>
         <h2>Регистрация</h2>
-        <form action="https://saniok6789.github.io/finalProjekt/registration.html" method="get">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Зарегистрироваться</button>
-        </form>
-
-        <div id="greeting"></div>
-    </section>
-</body>
-
-</html>
+        <form action="https://saniok6789.github.io/finalProjekt/index.html" method="

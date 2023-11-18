@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-
         header {
             background-color: #FFD700;
             color: #fff;
@@ -22,27 +20,19 @@
             align-items: center; /* Выравнивание элементов по вертикали */
             width: 100%; /* Растянуть до всей ширины экрана */
         }
-
         #logo {
             text-align: center; /* Выравнивание текста по центру */
         }
-
         #register-link {
             text-decoration: none;
             color: #000; /* Черный цвет текста */
             font-weight: bold; /* Жирный текст */
             margin-left: 20px; /* Отступ слева для разделения от центра */
         }
-
-        #register-link:hover {
-            color: #555; /* Цвет при наведении */
-        }
-
         #register-link img {
             height: 20px;
             margin-right: 5px;
         }
-
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -50,28 +40,23 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         img {
             max-width: 100%;
             height: auto;
         }
-
         form {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
         }
-
         label {
             margin-bottom: 5px;
         }
-
         input,
         textarea {
             padding: 8px;
             margin-bottom: 10px;
         }
-
         button {
             padding: 10px;
             background-color: #333;
@@ -80,38 +65,28 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         button:hover {
             background-color: #555;
         }
     </style>
-    <script>
-        function submitForm() {
-            // Получаем значение из поля ввода имени
-            var name = document.getElementById('deliveryAddress').value;
-
-            // Перенаправляем пользователя на основной сайт с приветствием
-            window.location.href = "https://saniok6789.github.io/finalProjekt/index.html" + encodeURIComponent(name);
-        }
-    </script>
 </head>
-
 <body>
     <header>
         <div id="logo">
             <h1>Bee_in_Sneakers🐝</h1>
         </div>
         <a href="https://saniok6789.github.io/finalProjekt/registration.html" id="register-link">
-            Зарегистрироваться
+            Зарееструватися🐝
         </a>
     </header>
     <section>
         <img src="bee1.jpg" alt="Банка с натуральным медом от пасеки в Вінницькій області" />
+        <img src="bee2.jpg" alt="Банка с натуральным медом от пасеки в Вінницькій області" />
         <h2>UA:Натуральний мед</h2>
         <h2>EN:Natural Honey</h2>
-        <p>UA:Мед зі своєї пасіки) пасіка знаходиться в Вінницькій області, біля лісу</p>
-        <p>EN:Honey from its apiary) the apiary is located in the Vinnytsia region, near the forest</p>
-        <form onsubmit="submitForm(); return false;">
+        <p>UA:Мед зі своєї пасіки пасіка знаходиться в Вінницькій області, біля лісу</p>
+        <p>EN:Honey from its apiary the apiary is located in the Vinnytsia region, near the forest</p>
+        <form>
             <label for="deliveryAddress">Адрес доставки:</label>
             <input type="text" id="deliveryAddress" name="deliveryAddress" required placeholder="Введите адрес доставки">
             <label for="email">Email:</label>
@@ -120,5 +95,4 @@
         </form>
     </section>
 </body>
-
 </html>

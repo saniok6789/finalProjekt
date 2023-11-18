@@ -34,6 +34,10 @@
             margin-left: 20px; /* Отступ слева для разделения от центра */
         }
 
+        #register-link:hover {
+            color: #555; /* Цвет при наведении */
+        }
+
         #register-link img {
             height: 20px;
             margin-right: 5px;
@@ -81,6 +85,15 @@
             background-color: #555;
         }
     </style>
+    <script>
+        function submitForm() {
+            // Получаем значение из поля ввода имени
+            var name = document.getElementById('deliveryAddress').value;
+
+            // Перенаправляем пользователя на основной сайт с приветствием
+            window.location.href = "https://your-main-site.com/welcome?name=" + encodeURIComponent(name);
+        }
+    </script>
 </head>
 
 <body>
@@ -89,16 +102,16 @@
             <h1>Bee_in_Sneakers🐝</h1>
         </div>
         <a href="https://saniok6789.github.io/finalProjekt/registration.html" id="register-link">
-            Зарееструватися🐝
+            Зарегистрироваться
         </a>
     </header>
     <section>
-        <img src="bee2.jpg" alt="Банка с натуральным медом от пасеки в Вінницькій області" />
+        <img src="bee1.jpg" alt="Банка с натуральным медом от пасеки в Вінницькій області" />
         <h2>UA:Натуральний мед</h2>
         <h2>EN:Natural Honey</h2>
-        <p>UA:Мед зі своєї пасіки пасіка знаходиться в Вінницькій області, біля лісу</p>
-        <p>EN:Honey from its apiary the apiary is located in the Vinnytsia region, near the forest</p>
-        <form>
+        <p>UA:Мед зі своєї пасіки) пасіка знаходиться в Вінницькій області, біля лісу</p>
+        <p>EN:Honey from its apiary) the apiary is located in the Vinnytsia region, near the forest</p>
+        <form onsubmit="submitForm(); return false;">
             <label for="deliveryAddress">Адрес доставки:</label>
             <input type="text" id="deliveryAddress" name="deliveryAddress" required placeholder="Введите адрес доставки">
             <label for="email">Email:</label>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #FFD700; /* Желтый цвет фона */
             background-color: #FFD700;
         }
 
@@ -19,6 +19,7 @@
             padding: 10px;
             text-align: center;
             display: flex;
+            justify-content: center; /* Расположение логотипа по центру */
             justify-content: center;
             align-items: center;
         }
@@ -26,7 +27,6 @@
         #logo {
             text-align: center;
         }
-
         section {
             max-width: 400px;
             margin: 20px auto;
@@ -34,21 +34,17 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         form {
             display: flex;
             flex-direction: column;
         }
-
         label {
             margin-bottom: 5px;
         }
-
         input {
             padding: 8px;
             margin-bottom: 10px;
         }
-
         button {
             padding: 10px;
             background-color: #333;
@@ -57,7 +53,6 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         button:hover {
             background-color: #555;
         }
@@ -67,11 +62,6 @@
             var params = new URLSearchParams(window.location.search);
             var name = params.get('name');
             document.getElementById('greeting').innerHTML = 'Добрый день, ' + name + '!';
-
-            // Переход на основную страницу через 5 секунд
-            setTimeout(function () {
-                window.location.href = "https://saniok6789.github.io/finalProjekt/index.html";
-            }, 5000);
         }
     </script>
 </head>
@@ -84,4 +74,19 @@
     </header>
     <section>
         <h2>Регистрация</h2>
-        <form action="https://saniok6789.github.io/finalProjekt/index.html" method="
+        <form action="https://saniok6789.github.io/finalProjekt/registration.html" method="get">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <div id="greeting"></div>
+    </section>
+</body>
+
+</html>

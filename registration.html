@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFD700; /* Желтый цвет фона */
+            background-color: #FFD700;
         }
 
         header {
@@ -19,7 +19,7 @@
             padding: 10px;
             text-align: center;
             display: flex;
-            justify-content: center; /* Расположение логотипа по центру */
+            justify-content: center;
             align-items: center;
         }
 
@@ -62,6 +62,13 @@
             background-color: #555;
         }
     </style>
+    <script>
+        window.onload = function () {
+            var params = new URLSearchParams(window.location.search);
+            var name = params.get('name');
+            document.getElementById('greeting').innerHTML = 'Добрый день, ' + name + '!';
+        }
+    </script>
 </head>
 
 <body>
@@ -84,6 +91,8 @@
 
             <button type="submit">Зарегистрироваться</button>
         </form>
+
+        <div id="greeting"></div>
     </section>
 </body>
 

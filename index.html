@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,28 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
-            background-color: #FFD700; /* Желтый цвет баннера */
+            background-color: #FFD700;
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            justify-content: flex-end; /* Выравнивание элементов по правому краю */
+            align-items: center; /* Выравнивание элементов по вертикали */
         }
+
+        #register-link {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        #register-link img {
+            height: 20px;
+            margin-right: 5px;
+        }
+
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -24,37 +41,53 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         img {
             max-width: 100%;
             height: auto;
         }
+
         form {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
         }
+
         label {
             margin-bottom: 5px;
         }
-        input, textarea {
+
+        input,
+        textarea {
             padding: 8px;
             margin-bottom: 10px;
         }
+
         button {
             padding: 10px;
             background-color: #333;
             color: #fff;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
+
 <body>
     <header>
+        <a href="https://your-other-domain.com" id="register-link">
+            <img src="register_icon.png" alt="Зарегистрироваться">
+            Зарегистрироваться
+        </a>
         <h1>Bee_in_Sneakers🐝</h1>
     </header>
     <section>
-        <img src="bee1.jpg" alt="Мед" />
+        <img src="bee1.jpg" alt="Банка с натуральным медом от пасеки в Вінницькій області" />
         <h2>UA:Натуральний мед</h2>
         <h2>EN:Natural Honey</h2>
         <p>UA:Мед зі своєї пасіки) пасіка знаходиться в Вінницькій області, біля лісу</p>
@@ -63,9 +96,10 @@
             <label for="name">Ім'я, Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="example@example.com">
             <button type="submit">Заказать мед🐝</button>
         </form>
     </section>
 </body>
+
 </html>
